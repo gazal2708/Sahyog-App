@@ -8,9 +8,11 @@
     <title>Sahyog App</title>
 </head>
 <body>
-    <h1 class="text-center">For Job seeker</h1>
+    <h1 class="text-center" style="margin-bottom: 35px;">Sahyog App</h1>
+    <h3 class="text-center">For Job seeker</h3>
     <div class="col-6 offset-3">
-        <h4 class="text-center">Fill Details</h2>
+        <div class="card" style="padding-left: 5%; padding-right: 5%;">
+        <h4 class="text-center">Fill Details</h4>
         <form action="/home" method="POST" class="validated-form"> 
             <div class="mb-3">
                 <label class="form-label" for="name">Full Name</label>
@@ -19,6 +21,7 @@
                     Looks good!
                   </div>
             </div>
+        
             <div class="mb-3">
                 <label class="form-label" for="phone">Contact Detail</label>
                 <input type="tel" pattern=".{10}" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
@@ -31,10 +34,13 @@
             </div>
         </form>
     </div>
+</div>
       <br>
-      <h1 class="text-center">For Job Poster</h1>
+      <hr>
+      <h3 class="text-center">For Job Poster</h3>
       <div class="col-6 offset-3">
-          <h4 class="text-center">Login</h2>
+        <div class="card" style="padding-left: 5%; padding-right: 5%;">
+          <h4 class="text-center">Login</h4>
           <form action="/admin" method="POST" class="validated-form"> 
               <div class="mb-3">
                   <label class="form-label" for="name">Username</label>
@@ -45,7 +51,7 @@
               </div>
               <div class="mb-3">
                   <label class="form-label" for="phone">Password</label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Phone Number" required>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                   <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -54,6 +60,7 @@
                   <button class="btn btn-success" type="submit">Submit</button>
               </div>
           </form>
+      </div>
       </div>
       
       

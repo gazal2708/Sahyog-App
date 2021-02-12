@@ -30,6 +30,8 @@
         async function showPosition(position) {
             document.getElementById("latitude").value  =  await position.coords.latitude 
             document.getElementById("longitude").value = await position.coords.longitude
+            // document.getElementById("latitude").value  =  27.1767
+            // document.getElementById("longitude").value = 78.0081
             console.log(document.getElementById("latitude").value,document.getElementById("longitude").value)
         }
 
