@@ -2,7 +2,7 @@
 
 Sahyog App is an app aimed to help blue collared workers to find jobs in nearby places from their current location. It helps the job seekers to search for ajob or they can simply look for nearby jobs available around their location. This app especially helps female blue collared workers to find jobs around their current location. along with this, users can also post jobs to hire workers.
 
-![](Sahyog_App.gif)
+![](App.gif)
 
 Pre-recuisites before running the app:
 1. Please ensure you have Node [https://nodejs.org/en/download/] and Elasticsearch [https://www.elastic.co/downloads/elasticsearch] installed in your system.
