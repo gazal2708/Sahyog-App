@@ -331,6 +331,7 @@ app.get('/showPostings',async(req,res)=>{
   async function (error, response,status) {
     if (error){
       console.log("search error: "+error)
+      res.render('PostJob/error')
     }
     else {
       console.log("--- Response ---");
