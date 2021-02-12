@@ -19,7 +19,7 @@ Follow the instructions for running the web-app:
 
 > Important Note: In the first time setup of the web-app on user's system, the elasticsearch node is empty, so the user has to first make 5 to 6 job postings before using the "Search for jobs", "See jobs around you" or "see jobs for females" feature.
 
-This web-app has 8 main functionalities:
+This web-app has 7 main functionalities:
 1. The Job seeker can get information on the nearby jobs from his/her current location.
 2. The Female Job seekers can get information on the jobs available for females.
 3. Job seeker can serach for specific type of jobs on a specific location.
