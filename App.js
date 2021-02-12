@@ -43,6 +43,8 @@ app.post('/home',async(req,res)=>{
 })
 
 app.post('/admin',async(req,res)=>{
+  sess = req.session
+  sess.job_poster_id = req.body.id
   res.redirect('/home')
 })
 
@@ -308,22 +310,20 @@ app.get('/postjob/:id',async(req,res)=>{
     });
 })
 
+
+
+
 app.get('/showPostings',async(req,res)=>{
-  res.render('PostJob/showPostings')
-})
-
-
-app.post('/showPostings',async(req,res)=>{
   sess = req.session
   username = sess.name
   contact = sess.contact
-  const{id} = req.body
+  poster_id = sess.job_poster_id
   await esClient.search({
     index:"jobs",
     body:{
       "query":{
         "match":{
-          "UserId":id
+          "UserId":poster_id
         }
       }
     }
