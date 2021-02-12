@@ -1,0 +1,64 @@
+#bg{
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-wrap: wrap;
+        background-position: center;
+        width: 100%; 
+        height: 100%; 
+        position: fixed; 
+        left: 0px; 
+        top: 0px; 
+        z-index: -1;
+        opacity: 0.4;
+}
+.cover-container{
+  max-width: 60vw;
+}
+
+@media screen and (min-width: 411px){
+    #btn1{
+        margin-bottom: 40px;
+    
+    }
+
+    #buttons{
+        margin-right: 45%;
+        margin-left: 0;
+        padding-left: 40px;
+    }
+    }
+
+@media screen and (min-width: 768px){
+#btn1{
+    margin-bottom: 40px;
+
+}
+#buttons{
+    margin-left: 25%;
+}
+}
+
+
+@media screen and (min-width: 360px){
+    #btn1{
+        margin-bottom: 40px;
+    
+    }
+    /* #buttons{
+        margin-left: 5%;
+    } */
+    }
+
+ @media screen and (min-width: 1255px){
+
+        #buttons{
+            margin-left: 27%;
+        }
+        #btn1{
+            margin-bottom: 0px;
+        
+        }
+        }
+
+

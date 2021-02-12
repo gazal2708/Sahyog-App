@@ -1,0 +1,30 @@
+<% layout('layouts/boilerplate') %>
+    <% if(jobs.length == 0){ %>
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Sorry! No Jobs were posted with this Id :( </h4>
+            </div>
+        </div>
+    </div>
+    <% } else { %> 
+        <h1>Jobs Posted By You </h1>
+        <% for (let job of jobs){ %>
+            <div class="card" mb-3>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Job Posted for:</strong> <%= job._source.Job_Title.toUpperCase() %></h5>
+                            <p class="card-text"><strong>Job Location:</strong> <%= job._source.City %>, <%= job._source.State %>, <%= job._source.Country %></p>
+                            <p class="card-text"><strong>Requirement for:</strong> <%= job._source.Gender %></p>
+                            <p class="card-text"><strong>Salary Offered:</strong> Rs.<%= job._source.Salary %> <%= job._source.Salary_Type %></p>
+                            <p class="card-text"><strong>Job Posted On:</strong> <%= job._source.Date %></p>
+                            <form action="/postjob/<%=job._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-primary">Delete Job Posting: <%= job._source.Job_Title %></a>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       <% } %>
+    <% } %> 

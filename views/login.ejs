@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sahyog App</title>
+</head>
+<body>
+    <h1 class="text-center">For Job seeker</h1>
+    <div class="col-6 offset-3">
+        <h4 class="text-center">Fill Details</h2>
+        <form action="/home" method="POST" class="validated-form"> 
+            <div class="mb-3">
+                <label class="form-label" for="name">Full Name</label>
+                  <input type="text" class="form-control" name="name" placeholder="Full Name" autofocus="" required/>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="phone">Contact Detail</label>
+                <input type="tel" pattern=".{10}" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+      <br>
+      <h1 class="text-center">For Job Poster</h1>
+      <div class="col-6 offset-3">
+          <h4 class="text-center">Login</h2>
+          <form action="/admin" method="POST" class="validated-form"> 
+              <div class="mb-3">
+                  <label class="form-label" for="name">Username</label>
+                    <input type="text" class="form-control" name="name" placeholder="Username" autofocus="" required/>
+                  <div class="valid-feedback">
+                      Looks good!
+                    </div>
+              </div>
+              <div class="mb-3">
+                  <label class="form-label" for="phone">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Phone Number" required>
+                  <div class="valid-feedback">
+                      Looks good!
+                    </div>
+              </div>
+              <div class="mb-3">
+                  <button class="btn btn-success" type="submit">Submit</button>
+              </div>
+          </form>
+      </div>
+      
+      
+</body>
+</html>

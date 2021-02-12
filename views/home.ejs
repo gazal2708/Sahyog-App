@@ -1,0 +1,38 @@
+<% layout('layouts/boilerplate') %>
+<link href="/home.css" rel="stylesheet" type="text/css">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<div id="bg"style="background-image: url('https://images.outlookindia.com/public/uploads/articles/2020/6/10/Women-worker_20190304_570_850.jpg');height=100%"></div>
+<div>
+<h1 class="text-center" style="padding-top: 20%; padding-bottom: 2%;">Welcome to Job Search</h1>
+<div class="row">
+<div id="buttons" class="col-12 col-sm-6 col-md-6">
+    <form id="my_form" action="/home/results" method="POST">
+        <input type="hidden" id="latitude" name="latitude">
+        <input type="hidden" id="longitude" name="longitude">
+    <button class="btn btn-success" id="btn1" >See Jobs Around You</button>
+    <button class="btn btn-warning" name="women" id="btn2">See Jobs For Females</button>
+    </form>
+</div>
+</div>
+</div>
+</div>
+
+
+    <script>
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } else { 
+            console.log("Geolocation is not supported by this browser.");
+          }
+        }
+        
+        async function showPosition(position) {
+            document.getElementById("latitude").value  =  await position.coords.latitude 
+            document.getElementById("longitude").value = await position.coords.longitude
+            console.log(document.getElementById("latitude").value,document.getElementById("longitude").value)
+        }
+
+
+        getLocation()
+</script>

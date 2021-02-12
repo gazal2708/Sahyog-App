@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate') %>
+    <% if(jobs.length == 0){ %>
+        <div class="row">
+            <div class="col-6 offset-3">
+                <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">Sorry! No jobs are matching your requirements :( </h4>
+            </div>
+        </div>
+    </div>
+    <% } else { %> 
+        <h1>Jobs Nearby You(within 800kms)</h1>
+        <% for (let job of jobs){ %>
+            <div class="card" mb-3>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><strong>Job Requirement for the role of:</strong> <%= job._source.Job_Title.toUpperCase() %></h5>
+                            <p class="card-text"><strong>Job is in:</strong>  <%= job._source.City %>, <%= job._source.State %>, <%= job._source.Country %></p>
+                            <p class="card-text"><strong>Job Requirement for: </strong>  <%= job._source.Gender %> workers.</p>
+                            <p class="card-text">Salary provided for the work will be Rs. <%= job._source.Salary %> <%= job._source.Salary_Type %>.</p>
+                            <p class="card-text">For further details, give a call on <%= job._source.Phone %>. If you want to apply for the job, please click "Apply" button below and the job poster will get notified of your interest in the role.</p>
+                            <input type="button" class="btn btn-primary" value="Apply" onclick="checkApply('<%= job._source.Email %>','<%= username %>','<%= contact %>','<%= job._id %>')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+            function checkApply(email,name,phone,id){
+                    // console.log(id)
+                    if(dic[id]==1){
+                        alert("You have applied to this job already")
+                    }
+                    else{
+                        dic[id] = 1
+                        sendEmail(email,name,phone)
+                    }
+                }
+                
+            </script>
+       <% } %>
+    <% } %> 

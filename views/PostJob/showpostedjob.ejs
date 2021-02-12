@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title"><%= body.Job_Title.toUpperCase() %></h5>
+              <p class="card-text"><%= body.Country %></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-muted"><%= body.City %>, <%= body.State %></li>
+            </ul>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-muted">For: <%= body.Gender %></li>
+            </ul>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-muted">Salary: <%= body.Salary %></li>
+            </ul>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-muted">Contact: <%= body.Phone %></li>
+            </ul>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-muted">Email Address: <%= body.Email %></li>
+            </ul>
+            <div class="card-body">
+              <a href="/home" class="card-link btn btn-warning ">Back to Home page</a>
+            </div>
+          </div>
+    </div>
+</div>
