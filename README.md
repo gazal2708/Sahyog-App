@@ -11,7 +11,7 @@ Pre-recuisites before running the app:
 
 Follow the instructions for running the web-app:
 1. Clone this repository.
-2. Start Elasticsearch server on your system. It can be done by running the command "cd .\elasticsearch.bat" inside bin folder of elasticsearch.
+2. Start Elasticsearch server on your system. It can be done by running the command ".\elasticsearch.bat" inside bin folder of elasticsearch.
 3. Run "npm install".
 4. Run "node create_index.js".
 5. Run "node put_mapping.js".
